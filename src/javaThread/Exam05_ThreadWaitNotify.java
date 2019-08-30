@@ -1,5 +1,6 @@
 package javaThread;
 
+
 // 공용객체를 생성하기 위한 class를 정의
 class MyShared {
 	

@@ -1,22 +1,23 @@
 package javaLambda;
 
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
 import java.util.function.ToIntFunction;
 
 /*
- * Funtion ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½º´Â ÀÔ·Â ¸Å°³º¯¼ö¿Í ¸®ÅÏ°ªÀÌ applyXXX() method°¡ Á¦°øµÇ¿ä!!
- * ÀÏ¹ÝÀûÀ¸·Î ÀÔ·Â ¸Å°³º¯¼ö¸¦ ¸®ÅÏ°ªÀ¸·Î mapping ½ÃÅ³ ¶§ ÀÏ¹ÝÀûÀ¸·Î »ç¿ëµÇ¿ä!
+ * Funtion ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ applyXXX() methodï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½!!
+ * ï¿½Ï¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ï¿½ï¿½ mapping ï¿½ï¿½Å³ ï¿½ï¿½ ï¿½Ï¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¿ï¿½!
  * 
  * Function<T,R> func = t -> { return ~~ };
- * T : ÀÔ·Â ¸Å°³º¯¼öÀÇ generic
- * R : ¸®ÅÏ°©ÀÇ generic
+ * T : ï¿½Ô·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ generic
+ * R : ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ generic
  * 
  */
 
 
-// Student VO class¸¦ Á¤ÀÇ
+// Student VO classï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 class Exam06_Student {
 	
 	private String sName;
@@ -63,10 +64,10 @@ class Exam06_Student {
 public class Exam06_LambdaUsingFunction {
 	
 	private static List<Exam06_Student> students = 
-			Arrays.asList(new Exam06_Student("È«±æµ¿",10,20,30),
-					new Exam06_Student("±è±æµ¿",50,60,70),
-					new Exam06_Student("ÀÌ¼ø½Å",90,20,30),
-					new Exam06_Student("½Å»çÀÓ´ç",10,100,70));
+			Arrays.asList(new Exam06_Student("È«ï¿½æµ¿",10,20,30),
+					new Exam06_Student("ï¿½ï¿½æµ¿",50,60,70),
+					new Exam06_Student("ï¿½Ì¼ï¿½ï¿½ï¿½",90,20,30),
+					new Exam06_Student("ï¿½Å»ï¿½ï¿½Ó´ï¿½",10,100,70));
 	
 	private static void printName(Function<Exam06_Student,String> function) {
 		
@@ -97,15 +98,15 @@ public class Exam06_LambdaUsingFunction {
 	
 	public static void main(String[] args) {
 
-		// ÇÐ»ý ÀÌ¸§À» Ãâ·Â!
+		// ï¿½Ð»ï¿½ ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½!
 		printName( t ->  t.getsName() );
 		
-		// getAvg() static method¸¦ ¸¸µé¾î¼­ ´ÙÀ½ÀÇ ³»¿ëÀ» Ãâ·ÂÇÏ¼¼¿ä 
-		// ÇÐ»ýµéÀÇ ±¹¾î¼ºÀû Æò±Õ => getAvg()
-		System.out.println("±¹¾îÆò±Õ" + getAvg( k -> k.getsKor()) );
-		// ÇÐ»ýµéÀÇ ¿µ¾î¼ºÀû Æò±Õ => getAvg()
-		System.out.println("¿µ¾îÆò±Õ" + getAvg( e -> e.getsEng()) );
-		// ÇÐ»ýµéÀÇ ¼öÇÐ¼ºÀû Æò±Õ => getAvg()
-		System.out.println("¼öÇÐÆò±Õ" + getAvg( m -> m.getsMath()) );
+		// getAvg() static methodï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï¼ï¿½ï¿½ï¿½ 
+		// ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¼ºï¿½ï¿½ ï¿½ï¿½ï¿½ => getAvg()
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + getAvg( k -> k.getsKor()) );
+		// ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½î¼ºï¿½ï¿½ ï¿½ï¿½ï¿½ => getAvg()
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + getAvg( e -> e.getsEng()) );
+		// ï¿½Ð»ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ => getAvg()
+		System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" + getAvg( m -> m.getsMath()) );
 	}
 }

@@ -1,5 +1,6 @@
 package javaStream;
 
+
 import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
@@ -7,12 +8,12 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 /*
- * StreamÀº Java 8¿¡¼­ µµÀÔÀÌ µÇ¾ú¾î¿ä! ÁÖÀÇÇØ¾ß ÇÒ°Ç java.io¾È¿¡ ÀÖ´Â
- * Stream°ú´Â ´Ù¸¥ ³ðÀÌ¿¡¿ä.
- * »ç¿ë ¿ëµµ : ÄÃ·º¼ÇÃ³¸®(List,Set,Map)¸¦ À§ÇØ¼­ »ç¿ëÀÌ µÇ¿ä!
- *          ÄÃ·º¼Ç ¾ÈÀÇ µ¥ÀÌÅÍ¸¦ ¹Ýº¹½ÃÅ°´Â ¹Ýº¹ÀÚÀÇ ¿ªÈ°À» ÇÏ´Â°Ô stream
- *          ex) ArrayList ¾È¿¡ ÇÐ»ý °´Ã¼°¡ 5°³ ÀÖÀ¸¸é ±× 5°³¸¦ ÇÏ³ª¾¿ °¡Á®¿À´Â ¿ªÈ°À» ¼öÇà.
- *               => ÀÌ·¸°Ô »çÁ®¿Â µ¥ÀÌÅÍ¸¦ ¶÷´Ù½ÄÀ» ÀÌ¿ëÇØ¼­ Ã³¸®ÇÒ ¼ö ÀÖ¾î¿ä!
+ * Streamï¿½ï¿½ Java 8ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¾ï¿½ï¿½ï¿½ï¿½! ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ò°ï¿½ java.ioï¿½È¿ï¿½ ï¿½Ö´ï¿½
+ * Streamï¿½ï¿½ï¿½ï¿½ ï¿½Ù¸ï¿½ ï¿½ï¿½ï¿½Ì¿ï¿½ï¿½ï¿½.
+ * ï¿½ï¿½ï¿½ ï¿½ëµµ : ï¿½Ã·ï¿½ï¿½ï¿½Ã³ï¿½ï¿½(List,Set,Map)ï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç¿ï¿½!
+ *          ï¿½Ã·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ýºï¿½ï¿½ï¿½Å°ï¿½ï¿½ ï¿½Ýºï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½ ï¿½Ï´Â°ï¿½ stream
+ *          ex) ArrayList ï¿½È¿ï¿½ ï¿½Ð»ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ 5ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ 5ï¿½ï¿½ï¿½ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È°ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
+ *               => ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½!
  */
 
 class Exam01_Student {
@@ -52,44 +53,44 @@ class Exam01_Student {
 public class Exam01_StreamBasic {
 
 	private static List<String> myBuddy = 
-			Arrays.asList("È«±æµ¿","±è±æµ¿","ÃÖ±æµ¿","½Å»çÀÓ´ç");
+			Arrays.asList("È«ï¿½æµ¿","ï¿½ï¿½æµ¿","ï¿½Ö±æµ¿","ï¿½Å»ï¿½ï¿½Ó´ï¿½");
 	
 	private static List<Exam01_Student> students =
-			Arrays.asList(new Exam01_Student("È«±æµ¿",10,20),
-					new Exam01_Student("ÃÖ±æµ¿",60,30),
-					new Exam01_Student("¹Ú±æµ¿",30,80),
-					new Exam01_Student("±è±æµ¿",90,10));
+			Arrays.asList(new Exam01_Student("È«ï¿½æµ¿",10,20),
+					new Exam01_Student("ï¿½Ö±æµ¿",60,30),
+					new Exam01_Student("ï¿½Ú±æµ¿",30,80),
+					new Exam01_Student("ï¿½ï¿½æµ¿",90,10));
 	
 	public static void main(String[] args) {
 
-		//// »ç¶÷ÀÌ¸§À» Ãâ·ÂÇÏ·Á°í ÇØ¿ä!
-		// ¹æ¹ý 1. ÀÏ¹Ý for¹® (Ã·ÀÚ¸¦ »ç¿ë)À» ÀÌ¿ëÇØ¼­ Ã³¸®.
+		//// ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ ï¿½Ø¿ï¿½!
+		// ï¿½ï¿½ï¿½ 1. ï¿½Ï¹ï¿½ forï¿½ï¿½ (Ã·ï¿½Ú¸ï¿½ ï¿½ï¿½ï¿½)ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ Ã³ï¿½ï¿½.
 		for(int i=0; i<myBuddy.size(); i++) {
 			System.out.println(myBuddy.get(i));
 		}
-		// ¹æ¹ý 2. Ã·ÀÚ¸¦ ÀÌ¿ëÇÑ ¹Ýº¹À» ÇÇÇÏ±â À§ÇØ Iterator¸¦ »ç¿ë.
+		// ï¿½ï¿½ï¿½ 2. Ã·ï¿½Ú¸ï¿½ ï¿½Ì¿ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï±ï¿½ ï¿½ï¿½ï¿½ï¿½ Iteratorï¿½ï¿½ ï¿½ï¿½ï¿½.
 		Iterator<String> iter = myBuddy.iterator();
 		while(iter.hasNext()) {
 			System.out.println(iter.next());
 		}
-		// ¹æ¹ý 3. Stream 
-		// list¿¡ ¿¬°á Åë·Î¸¦ ¶ÔÇã¼­ µ¥ÀÌÅÍ¸¦ ÇÏ³ª¾¿ streamÀ¸·Î Èê·ÁÁØ´Ù°í »ý°¢ÇÏÀÚ
-		// myBuddy¿¡ ´ëÇØ¼­ stream ¶Õ¾î!
+		// ï¿½ï¿½ï¿½ 3. Stream 
+		// listï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Î¸ï¿½ ï¿½ï¿½ï¿½ã¼­ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ï³ï¿½ï¿½ï¿½ streamï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø´Ù°ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+		// myBuddyï¿½ï¿½ ï¿½ï¿½ï¿½Ø¼ï¿½ stream ï¿½Õ¾ï¿½!
 		Consumer<String> consumer = t -> {
 			System.out.println(t + ", "
 					+Thread.currentThread().getName());
 		};
 		//Stream<String> stream = myBuddy.Stream();
 		Stream<String> stream = myBuddy.parallelStream();
-		// ¹Ýº¹. forEach : stream ¾È¿¡ ÀÖ´Â°Å ¹Ýº¹ÇØ
-		// i or iter °°Àº ¹Ýº¹ÀÚ°¡ ÇÊ¿ä¾ø¾î¿ä. ³»ºÎ ¹Ýº¹ÀÚ¸¦ ÀÌ¿ë.
-		// º´·ÄÃ³¸®°¡ °¡´É.
+		// ï¿½Ýºï¿½. forEach : stream ï¿½È¿ï¿½ ï¿½Ö´Â°ï¿½ ï¿½Ýºï¿½ï¿½ï¿½
+		// i or iter ï¿½ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½Ú°ï¿½ ï¿½Ê¿ï¿½ï¿½ï¿½ï¿½ï¿½. ï¿½ï¿½ï¿½ï¿½ ï¿½Ýºï¿½ï¿½Ú¸ï¿½ ï¿½Ì¿ï¿½.
+		// ï¿½ï¿½ï¿½ï¿½Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.
 		stream.forEach(consumer);
 		//stream.forEach(t -> System.out.println(t) );
 		
-		// ArrayList¿¡ ´ëÇÑ stream ¿­±â
+		// ArrayListï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ stream ï¿½ï¿½ï¿½ï¿½
 		Stream<Exam01_Student> studentStream = students.stream();
-		// mapToInt() : °´Ã¼¸¦ Á¤¼öÇüÀ¸·Î mapping , ¾î¶²°ªÀ¸·Î º¯Çü½ÃÅ³Áö ¶÷´Ù½ÄÀ» ÀÎÀÚ·Î Áà¾ßÇÔ 
+		// mapToInt() : ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ mapping , ï¿½î¶²ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Å³ï¿½ï¿½ ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ 
 		double avg = 
 				studentStream.mapToInt(t -> t.getKor()).average().getAsDouble();
 		

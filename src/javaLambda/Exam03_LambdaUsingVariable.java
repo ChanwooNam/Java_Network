@@ -1,16 +1,17 @@
 package javaLambda;
 
+
 /*
- * ¶÷´Ù½ÄÀ» Á¤ÀÇÇØ¼­ »ç¿ëÇÒ ¶§ ÁÖÀÇÇØ¾ß ÇÒ Á¡ÀÌ ÀÖ¾î¿ä!!
- * Å¬·¡½ºÀÇ ¸É¹ö(ÇÊµå + ¸Þ¼Òµå)¿Í ·ÎÄÃº¯¼ö(Áö¿ªº¯¼ö)ÀÇ »ç¿ë¿¡ ¾à°£ÀÇ Á¦¾àÀÌ ÀÖ¾î¿ä
+ * ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½!!
+ * Å¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½É¹ï¿½(ï¿½Êµï¿½ + ï¿½Þ¼Òµï¿½)ï¿½ï¿½ ï¿½ï¿½ï¿½Ãºï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½ ï¿½ï¿½ë¿¡ ï¿½à°£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½
  * 
- * Æ¯È÷ this keyword¸¦ »ç¿ëÇÒ ¶§ ÁÖÀÇÇØ¾ß ÇØ¿ä!
- * this : ÇöÀç »ç¿ëµÇ´Â °´Ã¼ÀÇ reference 
- * ¶÷´Ù½ÄÀº ÀÍ¸í °´Ã¼¸¦ ¸¸µé¾î ³»´Â ÄÚµå¿¡¿ä. 
- * ¶÷´Ù½ÄÀÇ ½ÇÇàÄÚµå ³»¿¡¼­ this keyword¸¦ ¾²¸é ÀÍ¸í°´Ã¼¸¦ ÁöÄªÇÏÁö ¾Ê¾Æ¿ä!
- * »óÀ§ °´Ã¼¸¦ ÁöÄªÇÏ°Ô µÇ¿ä!
+ * Æ¯ï¿½ï¿½ this keywordï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ø¿ï¿½!
+ * this : ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç´ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ reference 
+ * ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ ï¿½Í¸ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Úµå¿¡ï¿½ï¿½. 
+ * ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Úµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ this keywordï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Í¸ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½Äªï¿½ï¿½ï¿½ï¿½ ï¿½Ê¾Æ¿ï¿½!
+ * ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½Äªï¿½Ï°ï¿½ ï¿½Ç¿ï¿½!
  * 
- * ¶÷´Ù½Ä ¾È¿¡¼­´Â Áö¿ªº¯¼ö¸¦ readonly ÇüÅÂ·Î »ç¿ëÇÏ°Ô µÇ¿ä!
+ * ï¿½ï¿½ï¿½Ù½ï¿½ ï¿½È¿ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ readonly ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½Ç¿ï¿½!
  */
 
 @FunctionalInterface
@@ -19,57 +20,57 @@ interface Exam03_LambdaIF{
 }
 
 class outerClass {
-		// Field ( ±âº»ÀûÀ¸·Î classÀÇ field´Â private )
+		// Field ( ï¿½âº»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ classï¿½ï¿½ fieldï¿½ï¿½ private )
 		public int outerField = 100;
 		
 		public outerClass() {
-			//defalult »ý¼ºÀÚ
+			//defalult ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			
 			System.out.println(this.getClass().getName());
 		}
 		
-		// class¾È¿¡ ´Ù¸¥ class¸¦ Á¤ÀÇÇÒ°Å¿¡¿ä. ( inner class )
+		// classï¿½È¿ï¿½ ï¿½Ù¸ï¿½ classï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò°Å¿ï¿½ï¿½ï¿½. ( inner class )
 		class innerClass {
 			int innerField = 200; // Field
 			
 		
 			Exam03_LambdaIF fieldLambda = () -> {
 				System.out.println("outerField : "+outerField);
-				System.out.println("outerClassÀÇ °´Ã¼¸¦ Ã£¾Æ¿ä : " + outerClass.this.outerField);
+				System.out.println("outerClassï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ Ã£ï¿½Æ¿ï¿½ : " + outerClass.this.outerField);
 				System.out.println("innerField : "+innerField);
 				System.out.println("this.innerField : " + this.innerField);
 				System.out.println(this.getClass().getName()); 
 				};
 		 
 			// field
-			// »ý¼ºÀÚ
+			// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 			public innerClass() {
 				System.out.println(this.getClass().getName());
 			}
-			// ÀÏ¹Ý method
+			// ï¿½Ï¹ï¿½ method
 			public void innerMethod() {
-				int localVal = 100;		// Áö¿ªº¯¼ö 
-				                        // Áö¿ªº¯¼ö´Â stack¿µ¿ª¿¡ ÀúÀåÀÌ µÇ°í
-				                        // method°¡ È£ÃâµÇ¸é »ý±â°í 
-				                        // method°¡ ³¡³ª¸é ³¯¶ó°£´Ù 
+				int localVal = 100;		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
+				                        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ stackï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ç°ï¿½
+				                        // methodï¿½ï¿½ È£ï¿½ï¿½Ç¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ 
+				                        // methodï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ó°£´ï¿½ 
 				Exam03_LambdaIF localLambda = () -> {
 					System.out.println(localVal);
-					//localVal = 50;		// final·Î ¼³Á¤ÇÏ¸é °ªÀ» ¸ø¹Ù²ã¿ä
-											// °ªÀ» ¹Ù²Ü¼ö°¡ ¾ø¾î¿ä (readonly)
-											// ¶÷´Ù¿¡¼­ Áö¿ªº¯¼ö´Â final·Î ³»ºÎÀûÀ¸·Î ÁöÁ¤ÇÔ 
+					//localVal = 50;		// finalï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ù²ï¿½ï¿½
+											// ï¿½ï¿½ï¿½ï¿½ ï¿½Ù²Ü¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ (readonly)
+											// ï¿½ï¿½ï¿½Ù¿ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ finalï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
 				};
 				localLambda.myFunc();
 			}
 		}
 }
 
-// ÇÁ·Î±×·¥ÀÇ ½ÃÀÛÀ» À§ÇÑ dummy class·Î »ç¿ë 
+// ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ dummy classï¿½ï¿½ ï¿½ï¿½ï¿½ 
 public class Exam03_LambdaUsingVariable {
 	public static void main(String[] args) {
-		// ¶÷´Ù½ÄÀ» »ç¿ëÇÏ·Á¸é innerClassÀÇ interface°¡ Á¸ÀçÇØ¾ß ÇØ¿ä!
-		// ±×·±µ¥ ÇÏÇÊÀÌ¸é ÀÌ innerClass°¡ inner class ³» ??
-		// inner classÀÇ instance¸¦ »ý¼ºÇÏ·Á¸é outer classÀÇ instanceºÎÅÍ
-		// »ý¼­ÇØ¾ß ÇØ¿ä!
+		// ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ innerClassï¿½ï¿½ interfaceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ø¿ï¿½!
+		// ï¿½×·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ì¸ï¿½ ï¿½ï¿½ innerClassï¿½ï¿½ inner class ï¿½ï¿½ ??
+		// inner classï¿½ï¿½ instanceï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ outer classï¿½ï¿½ instanceï¿½ï¿½ï¿½ï¿½
+		// ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ø¿ï¿½!
 		outerClass outer = new outerClass();
 		outerClass.innerClass inner = outer.new innerClass();
 		inner.fieldLambda.myFunc();

@@ -1,5 +1,6 @@
 package javaThread;
 
+
 /*
  * 2개의 Thread를 파생시켜서 공용객체를 이용하도록 만들어 보아요!
  * Thread가 공용객체를 동기화해서 

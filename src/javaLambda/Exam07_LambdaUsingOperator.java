@@ -1,21 +1,22 @@
 package javaLambda;
 
+
 import java.util.function.IntBinaryOperator;
 
 /*
- * Operator´Â Function°ú ÇÏ´ÂÀÏÀÌ °ÅÀÇ ºñ½ÁÇØ¿ä
- * ÀÔ·Â ¸Å°³º¯¼ö°¡ ÀÖ°í ¸®ÅÏ°ªÀÌ ÀÖ¾î¿ä
- * FunctionÀº mapping ¿ëµµ·Î ¸¹ÀÌ »ç¿ëµÇ¿ä. ( ÀÔ·Â ¸Å°³º¯¼ö¸¦ ¸®ÅÏÅ¸ÀÔÀ¸·Î º¯È¯,¸ÅÇÎÀÇ ¿ëµµ )
- * Operator´Â ¿¬»ê¿ëµµ·Î ¸¹ÀÌ »ç¿ëµÇ¿ä. ( ÀÔ·Â ¸Å°³º¯¼ö¸¦ ÀÌ¿ëÇÏ¿© °°Àº Å¸ÀÔÀÇ ¸®ÅÏ°ªÀ» µ¹·ÁÁÖ´Â ÇüÅÂ·Î »ç¿ë )
+ * Operatorï¿½ï¿½ Functionï¿½ï¿½ ï¿½Ï´ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½
+ * ï¿½Ô·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö°ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½
+ * Functionï¿½ï¿½ mapping ï¿½ëµµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¿ï¿½. ( ï¿½Ô·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Å¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½È¯,ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ëµµ )
+ * Operatorï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ëµµï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¿ï¿½. ( ï¿½Ô·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ï¿ï¿½ ï¿½ï¿½ï¿½ï¿½ Å¸ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ )
  * 
- * ÃÖ´ë°ª°ú ÃÖ¼Ò°ªÀ» ±¸ÇÏ´Â static method¸¦ ÇÏ³ª ÀÛ¼ºÇØ º¸¾Æ¿ä ! 
+ * ï¿½Ö´ë°ªï¿½ï¿½ ï¿½Ö¼Ò°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ static methodï¿½ï¿½ ï¿½Ï³ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½ ! 
  */
 public class Exam07_LambdaUsingOperator {
 	
 	private static int arr[] = { 100, 92, 50 ,89, 34, 27, 99, 3};
 	
-	// getMaxMin()À» static method·Î ¸¸µé²¨¿¡¿ä!
-	// »ç¿ëÇÏ´Â Operator´Â IntBinaryOperator¸¦ ÀÌ¿ë.
+	// getMaxMin()ï¿½ï¿½ static methodï¿½ï¿½ ï¿½ï¿½ï¿½é²¨ï¿½ï¿½ï¿½ï¿½!
+	// ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ Operatorï¿½ï¿½ IntBinaryOperatorï¿½ï¿½ ï¿½Ì¿ï¿½.
 	private static int getMaxMin(IntBinaryOperator operator) {
 		int result = arr[0];
 		
@@ -28,17 +29,17 @@ public class Exam07_LambdaUsingOperator {
 	}
 	public static void main(String[] args) {
 
-		//getMaxMin("MAX"); // ÃÖ´ë°ªÀ» ±¸ÇÏ´Â methodÈ£Ãâ
-		//getMaxMin("MIN"); // ÃÖ¼Ò°ªÀ» ±¸ÇÏ´Â methodÈ£Ãâ
-		// ÀÌ·¸°Ô ÇÏÁö ¸»¾Æ¿ä!!
-		// Operator¸¦ ÀÌ¿ëÇØ¼­ Ã³¸®ÇØ º¸¾Æ¿ä!
-		System.out.println("ÃÖ´ë°ª : " + getMaxMin( ( a,b ) -> {
+		//getMaxMin("MAX"); // ï¿½Ö´ë°ªï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ methodÈ£ï¿½ï¿½
+		//getMaxMin("MIN"); // ï¿½Ö¼Ò°ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ methodÈ£ï¿½ï¿½
+		// ï¿½Ì·ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!!
+		// Operatorï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ Ã³ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½!
+		System.out.println("ï¿½Ö´ë°ª : " + getMaxMin( ( a,b ) -> {
 			return a >= b ? a : b;
 		} ));
 		/*
 		 * getMaxMin( ( a,b ) -> { return a >= b ? a : b; } );
 		 */
-		System.out.println("ÃÖ¼Ò°ª : "+ getMaxMin( ( a,b ) -> {
+		System.out.println("ï¿½Ö¼Ò°ï¿½ : "+ getMaxMin( ( a,b ) -> {
 			return a < b ? a : b;
 		} ));
 		/*

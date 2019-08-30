@@ -12,6 +12,7 @@ import java.util.Map;
 
 public class Exam03_ObjectStream {
 
+	
 	public static void main(String[] args) {
 		Map<String,String> map = new HashMap<String,String>();
 		map.put("1", "홍길동");

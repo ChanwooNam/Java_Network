@@ -1,5 +1,6 @@
 package javaNetwork;
 
+
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
@@ -12,34 +13,34 @@ import java.util.Date;
 public class Exam02_EchoServer {
 
 	public static void main(String[] args) throws IOException {
-		//¼­¹öÂÊ ÇÁ·Î±×·¥Àº Å¬¶óÀÌ¾ðÆ®ÀÇ ¼ÒÄÏ Á¢¼ÓÀ» ´ë±â±¸Çö
-		//ServerSocket class¸¦ ÀÌ¿ëÇØ¼­ ±¸Çö
+		//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Î±×·ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½â±¸ï¿½ï¿½
+		//ServerSocket classï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½
 		ServerSocket server = null;
-		//Å¬¶óÀÌ¾ðÆ®¿Í Á¢¼ÓµÈ ÈÄ Socket °´Ã¼°¡ ÀÖ¾î¾ßÁö Å¬¶óÀÌ¾ðÆ®¿Í µ¥ÀÌÅÍ Åë½ÅÀÌ °¡´É
+		//Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½Óµï¿½ ï¿½ï¿½ Socket ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½ï¿½ï¿½ Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		Socket socket = null;
 		
 		try {
-			//port¹øÈ£¸¦ °¡Áö°í ServerSocket°´Ã¼¸¦ »ý¼º
-			//0~65535 »ç¿ë°¡´É 0~1023±îÁö´Â ¿¹¾àµÇ¾î ÀÖÀ½
+			//portï¿½ï¿½È£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ServerSocketï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+			//0~65535 ï¿½ï¿½ë°¡ï¿½ï¿½ 0~1023ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½ï¿½ï¿½ï¿½
 			server = new ServerSocket(5554);
-			System.out.println("Å¬¶óÀÌ¾ðÆ® Á¢¼Ó´ë±â");
+			System.out.println("Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½Ó´ï¿½ï¿½");
 			while(true) {
-				socket = server.accept(); //Å¬¶óÀÌ¾ðÆ® Á¢¼Ó´ë±â block
+				socket = server.accept(); //Å¬ï¿½ï¿½ï¿½Ì¾ï¿½Æ® ï¿½ï¿½ï¿½Ó´ï¿½ï¿½ block
 				ServerThread st = new ServerThread(socket);
 				st.start();
-				System.out.println(socket.getInetAddress()+"´Ô ÀÔÀå");
+				System.out.println(socket.getInetAddress()+"ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 
-//				// input stream »ý¼º
+//				// input stream ï¿½ï¿½ï¿½ï¿½
 //				BufferedReader br = new BufferedReader(
 //						new InputStreamReader(socket.getInputStream()));
-//				// output stream »ý¼º
+//				// output stream ï¿½ï¿½ï¿½ï¿½
 //				PrintWriter out = new PrintWriter(socket.getOutputStream());
 //				
-//				// br·Î ºÎÅÍ µ¥ÀÌÅÍ¸¦ ÀÐ¾î¼­ outÀ» ÅëÇØ ´Ù½Ã Àü´Þ
+//				// brï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ð¾î¼­ outï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ù½ï¿½ ï¿½ï¿½ï¿½ï¿½
 //				String msg = br.readLine();
 //				out.println(msg);
 //				
-//				out.flush();//³»ºÎ buffer¸¦ ºñ¿ì°í µ¥ÀÌÅÍ¸¦ Àü´Þ¸í·É
+//				out.flush();//ï¿½ï¿½ï¿½ï¿½ bufferï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½
 //				out.close();
 //				socket.close();
 //				server.close();
@@ -49,13 +50,13 @@ public class Exam02_EchoServer {
 				socket.close();
 			if (server != null)
 				server.close();
-			System.out.println("**¼­¹ö Á¾·á**");   
+			System.out.println("**ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½**");   
 		}
 	}		
 }
 
 class ServerThread extends Thread{
-	 //¸â¹öº¯¼ö·Î ¼±¾ð
+	 //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 	 private Socket socket;
 	 private BufferedReader br = null;
 	 private PrintWriter out = null;
@@ -64,12 +65,12 @@ class ServerThread extends Thread{
 	 ServerThread(Socket socket){
 		 this.socket = socket;
 	 }
-	 //¿À¹ö¶óÀÌµùÀÏ °æ¿ì throw ºÒ°¡.
+	 //ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ìµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ throw ï¿½Ò°ï¿½.
 	 public void run() {
 		 try{
 			 service();
 		 }catch(IOException e){
-			 //System.out.println("**"+userIP+"´Ô Á¢¼Ó Á¾·á.");
+			 //System.out.println("**"+userIP+"ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½.");
 			 e.printStackTrace();
 		 }finally{
 			 try {
@@ -87,11 +88,11 @@ class ServerThread extends Thread{
 		 while(true){
 			 msg = br.readLine();
 			 if(msg == null){
-				 //System.out.println(userIP+"´ÔÀÌ ¿¬°áÀ» Á¾·áÇß½À´Ï´Ù.");
+				 //System.out.println(userIP+"ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ß½ï¿½ï¿½Ï´ï¿½.");
 				 System.out.println("1");
 				 break;
 			 }
-			 //System.out.println(userIP+"´Ô: "+msg);
+			 //System.out.println(userIP+"ï¿½ï¿½: "+msg);
 			 System.out.println("2");
 			 out.println(msg);
 		 }

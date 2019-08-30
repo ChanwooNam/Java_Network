@@ -1,6 +1,7 @@
 package javaThread;
 
 
+
 /*
  * Java Application은 main thread가 main() method를 호출해서 실행
  * 

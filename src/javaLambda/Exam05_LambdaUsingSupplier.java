@@ -1,5 +1,6 @@
 package javaLambda;
 
+
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
@@ -9,15 +10,15 @@ import java.util.function.IntSupplier;
 import java.util.function.Supplier;
 
 /*
- *  Supplier¶ó°í ºÒ¸®´Â ÇÔ¼öÀû ÀÎÅÍÆäÀÌ½º ¿©·¯°³°¡ ¿ì¸®¿¡°Ô Á¦°øµÇ´Âµ¥
- *  ÀÌ ÀÎÅÍÆäÀÌ½ºÀÇ Æ¯Â¡Àº ¸Å°³º¯¼ö°¡ ¾ø¾î¿ä!
- *  getXXX()¶ó´Â method°¡ Ãß»ó ¸Þ¼Òµå ÇüÅÂ·Î ÀÎÅÍÆäÀÌ½º¾È¿¡ ¼±¾ðµÇ¾î ÀÖ¾î¿ä
+ *  Supplierï¿½ï¿½ï¿½ ï¿½Ò¸ï¿½ï¿½ï¿½ ï¿½Ô¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ì¸®ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ç´Âµï¿½
+ *  ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ Æ¯Â¡ï¿½ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½!
+ *  getXXX()ï¿½ï¿½ï¿½ methodï¿½ï¿½ ï¿½ß»ï¿½ ï¿½Þ¼Òµï¿½ ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½È¿ï¿½ ï¿½ï¿½ï¿½ï¿½Ç¾ï¿½ ï¿½Ö¾ï¿½ï¿½
  *  
- *  Ä£±¸ ¸ñ·ÏÀ» List<String> ÇüÅÂ·Î ¸¸µé¾î¿ä 
+ *  Ä£ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ List<String> ï¿½ï¿½ï¿½Â·ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 
  * */
 
 public class Exam05_LambdaUsingSupplier {
-	// ·Î¶Ç ¹øÈ£ (1~45)¸¦ ÀÚµ¿À¸·Î »ý¼ºÇÏ°í Ãâ·ÂÇÏ´Â °£´ÜÇÑ method¸¦ ÀÛ¼º 
+	// ï¿½Î¶ï¿½ ï¿½ï¿½È£ (1~45)ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ methodï¿½ï¿½ ï¿½Û¼ï¿½ 
 	public static void generateLotto(IntSupplier supplier,
 			Consumer<Integer> consumer) {
 		Set<Integer> set = new HashSet<Integer>();
@@ -32,10 +33,10 @@ public class Exam05_LambdaUsingSupplier {
 	
 	public static void main(String[] args) {
 
-		final List<String> myBuddy = Arrays.asList("È«±æµ¿","±è±æµ¿","ÃÖ±æµ¿","ÀÌ¼ø½Å");
+		final List<String> myBuddy = Arrays.asList("È«ï¿½æµ¿","ï¿½ï¿½æµ¿","ï¿½Ö±æµ¿","ï¿½Ì¼ï¿½ï¿½ï¿½");
 		
-		// Supplier¸¦ ÀÌ¿ëÇØ¼­ ·£´ýÀ¸·Î 1¸íÀÇ Ä£±¸¸¦ Ãâ·ÂÇØ º¸¾Æ¿ä! 
-		// Math.random() : 0ÀÌ»ó 1¹Ì¸¸ÀÇ ½Ç¼ö => 0ÀÌ»ó 4¹Ì¸¸ÀÇ ½Ç¼ö
+		// Supplierï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ï¿½ï¿½ Ä£ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½! 
+		// Math.random() : 0ï¿½Ì»ï¿½ 1ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ç¼ï¿½ => 0ï¿½Ì»ï¿½ 4ï¿½Ì¸ï¿½ï¿½ï¿½ ï¿½Ç¼ï¿½
 		Supplier<String> supplier = () -> {
 			return myBuddy.get((int)(Math.random() * 4));
 			
@@ -43,8 +44,8 @@ public class Exam05_LambdaUsingSupplier {
 		System.out.println(supplier.get());
 		
 		/////////////////////////////
-		// IntSupplier : Á¤¼ö°ªÀ» 1°³ ¸®ÅÏÇÏ´Â supplier
-		// ·Î¶Ç ¹øÈ£¸¦ ÀÚµ¿À¸·Î »ý¼ºÇÏ°í Ãâ·ÂÇÏ´Â °£´ÜÇÑ method¸¦ ÀÛ¼º
+		// IntSupplier : ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ 1ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ supplier
+		// ï¿½Î¶ï¿½ ï¿½ï¿½È£ï¿½ï¿½ ï¿½Úµï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï°ï¿½ ï¿½ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ methodï¿½ï¿½ ï¿½Û¼ï¿½
 		// generateRotto(supplier,consumer)
 		generateLotto(() -> {
 			return (int)(Math.random() * 45 + 1);

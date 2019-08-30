@@ -1,27 +1,28 @@
 package javaLambda;
 
+
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.function.ToIntFunction;
 
 /*
- * Predicate´Â ÀÔ·Â ¸Å°³º¯¼ö°¡ ÀÖ¾î¿ä. boolean ¸®ÅÏ.
- * »ç¿ëµÇ´Â method´Â testXXX()°¡ »ç¿ëµÇ¿ä!
- * ÀÔ·Â ¸Å°³º¯¼ö¸¦ Á¶»çÇÏ¿© true, flase°ªÀ» ¸®ÅÏÇØ¾ß ÇÏ´Â °æ¿ì.  
+ * Predicateï¿½ï¿½ ï¿½Ô·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½. boolean ï¿½ï¿½ï¿½ï¿½.
+ * ï¿½ï¿½ï¿½Ç´ï¿½ methodï¿½ï¿½ testXXX()ï¿½ï¿½ ï¿½ï¿½ï¿½Ç¿ï¿½!
+ * ï¿½Ô·ï¿½ ï¿½Å°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ true, flaseï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¾ï¿½ ï¿½Ï´ï¿½ ï¿½ï¿½ï¿½.  
  * 
- * ÇÐ»ý °´Ã¼¸¦ ¸¸µé¾î¼­ List·Î À¯ÁöÇÒ°Å¿¡¿ä
- * static method¸¦ ¸¸µé¾î¼­ ¶÷´Ù½ÄÀ¸·Î ÀÎÀÚ¸¦ ³Ñ°ÜÁÙ°Å¿¡¿ä
- * ¼ºº°¿¡ µû¸¥ Æ¯Á¤ °ú¸ñÀÇ Æò±ÕÀ» ±¸ÇÒ ¼ö ÀÖµµ·Ï method¸¦ ÀÛ¼ºÇØ º¸¾Æ¿ä
+ * ï¿½Ð»ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½î¼­ Listï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ò°Å¿ï¿½ï¿½ï¿½
+ * static methodï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½î¼­ ï¿½ï¿½ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ú¸ï¿½ ï¿½Ñ°ï¿½ï¿½Ù°Å¿ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Æ¯ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Öµï¿½ï¿½ï¿½ methodï¿½ï¿½ ï¿½Û¼ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Æ¿ï¿½
  * 
  */
 
 class Exam08_student {
-	private String name;	// ÇÐ»ýÀÌ¸§
-	private int kor;	// ±¹¾î¼ºÀû
-	private int eng;	// ¿µ¾î¼ºÀû
-	private int math;	// ¼öÇÐ¼ºÀû
-	private String gender;	// ¼ºº°
+	private String name;	// ï¿½Ð»ï¿½ï¿½Ì¸ï¿½
+	private int kor;	// ï¿½ï¿½ï¿½î¼ºï¿½ï¿½
+	private int eng;	// ï¿½ï¿½ï¿½î¼ºï¿½ï¿½
+	private int math;	// ï¿½ï¿½ï¿½Ð¼ï¿½ï¿½ï¿½
+	private String gender;	// ï¿½ï¿½ï¿½ï¿½
 	
 	public Exam08_student() {}
 	
@@ -68,13 +69,13 @@ class Exam08_student {
 public class Exam08_LambdaUsingPredicate {
 	
 	private static List<Exam08_student> students =
-			Arrays.asList(new Exam08_student("È«±æµ¿",10,20,30,"³²ÀÚ"),
-					new Exam08_student("¹Ú±æµ¿",20,90,60,"³²ÀÚ"),
-					new Exam08_student("½Å»çÀÓ´ç",30,30,90,"¿©ÀÚ"),
-					new Exam08_student("À¯°ü¼ø",80,80,100,"¿©ÀÚ"),
-					new Exam08_student("ÀÌ¼ø½Å",30,10,10,"³²ÀÚ"));
+			Arrays.asList(new Exam08_student("È«ï¿½æµ¿",10,20,30,"ï¿½ï¿½ï¿½ï¿½"),
+					new Exam08_student("ï¿½Ú±æµ¿",20,90,60,"ï¿½ï¿½ï¿½ï¿½"),
+					new Exam08_student("ï¿½Å»ï¿½ï¿½Ó´ï¿½",30,30,90,"ï¿½ï¿½ï¿½ï¿½"),
+					new Exam08_student("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½",80,80,100,"ï¿½ï¿½ï¿½ï¿½"),
+					new Exam08_student("ï¿½Ì¼ï¿½ï¿½ï¿½",30,10,10,"ï¿½ï¿½ï¿½ï¿½"));
 	
-	// static method¸¦ ÇÏ³ª Á¤ÀÇ ÇÏ´Âµ¥ ¼ºº°¿¡ µû¸¥ Æ¯Á¤°ú¸ñÀÇ Æò±ÕÀ» ±¸ÇÏ´Â ÀÛ¾÷
+	// static methodï¿½ï¿½ ï¿½Ï³ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½Ï´Âµï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Æ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½Ï´ï¿½ ï¿½Û¾ï¿½
 	private static double avg(Predicate<Exam08_student> predicate,
 			ToIntFunction<Exam08_student> function) {
 		
@@ -94,11 +95,11 @@ public class Exam08_LambdaUsingPredicate {
 	public static void main(String[] args) {
 		
 		// t -> t.getGender()
-		// µé¾î°¡´Â °ªÀº °´Ã¼°í ³ª¿À´Â°Ç string
-		// t -> t.getGender().equals("³²ÀÚ")
-		// ÀÔ·ÂÀº °´Ã¼ ¸®ÅÏÀº true or false
-		avg( t -> t.getGender().equals("³²ÀÚ"), t -> t.getMath() ); // ³²ÀÚµé¿¡ ´ëÇÑ ¼öÇÐÆò±ÕÀº?
-		avg( t -> t.getGender().equals("¿©ÀÚ"), t -> t.getEng() );
+		// ï¿½ï¿½î°¡ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Â°ï¿½ string
+		// t -> t.getGender().equals("ï¿½ï¿½ï¿½ï¿½")
+		// ï¿½Ô·ï¿½ï¿½ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ true or false
+		avg( t -> t.getGender().equals("ï¿½ï¿½ï¿½ï¿½"), t -> t.getMath() ); // ï¿½ï¿½ï¿½Úµé¿¡ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½?
+		avg( t -> t.getGender().equals("ï¿½ï¿½ï¿½ï¿½"), t -> t.getEng() );
 	}
 	
 }

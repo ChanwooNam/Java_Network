@@ -8,6 +8,7 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.net.Socket;
 
+
 class MyClass implements Serializable{
 	// 직렬화와 역직렬화를 할때 같은 타입인지 비교하기 위해서 내부적으로 사용
 	private static final long serialVersionUID = 1L;

@@ -18,7 +18,6 @@ import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.FlowPane;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
-
 /*
  * JavaFX를 이용해서 GUI 프로그램을 구현
  * 화면에 창 띄우려면 Application이라는 class의 instance를 생성

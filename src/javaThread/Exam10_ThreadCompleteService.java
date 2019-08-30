@@ -1,5 +1,6 @@
 package javaThread;
 
+
 /*
  * 1부터 100까지 숫자의 합을 구하려고 해요
  * 1~10까지 1개의 Thread가 합을 계산해서 결과를 return

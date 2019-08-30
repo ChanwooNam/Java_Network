@@ -1,5 +1,6 @@
 package javaStream;
 
+
 import java.nio.charset.Charset;
 import java.nio.file.Files;
 import java.nio.file.Path;
@@ -10,42 +11,42 @@ import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /*
- * java.util.stream package ¾È¿¡ ¿ì¸®°¡ »ç¿ëÇÒ ¼ö ÀÖ´Â streamÀÌ Á¸ÀçÇØ¿ä!
- * BaseStreamÀ¸·ÎºÎÅÍ »ó¼Ó¹Þ¾Æ¼­ ¸î¸î°³ÀÇ StreamÀÌ Á¸Àç
- * Stream => ÇØ´ç Stream ¾È¿¡ °´Ã¼ µé¾î°¡ ÀÖ´Â °æ¿ì
- * IntStream => ÇØ´ç Stream ¾È¿¡ int°ªÀÌ µé¾î°¡ ÀÖ´Â °æ¿ì
+ * java.util.stream package ï¿½È¿ï¿½ ï¿½ì¸®ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ö´ï¿½ streamï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ø¿ï¿½!
+ * BaseStreamï¿½ï¿½ï¿½Îºï¿½ï¿½ï¿½ ï¿½ï¿½Ó¹Þ¾Æ¼ï¿½ ï¿½ï¿½î°³ï¿½ï¿½ Streamï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+ * Stream => ï¿½Ø´ï¿½ Stream ï¿½È¿ï¿½ ï¿½ï¿½Ã¼ ï¿½ï¿½î°¡ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½
+ * IntStream => ï¿½Ø´ï¿½ Stream ï¿½È¿ï¿½ intï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½î°¡ ï¿½Ö´ï¿½ ï¿½ï¿½ï¿½
  * LongStream
  * DoubleStream
  * 
- * ¿©·¯°¡Áö ÇüÅÂÀÇ ´Ù¾çÇÑ source¿¡¼­ StreamÀ» ¾ò¾î³¾ ¼ö ÀÖ¾î¿ä! 
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ù¾ï¿½ï¿½ï¿½ sourceï¿½ï¿½ï¿½ï¿½ Streamï¿½ï¿½ ï¿½ï¿½î³¾ ï¿½ï¿½ ï¿½Ö¾ï¿½ï¿½! 
  * 
  * 
  */
 public class Exam02_StreamSource {
 	
 	private static List<String> names = 
-			Arrays.asList("È«±æµ¿","±è±æµ¿","ÃÖ±æµ¿");
+			Arrays.asList("È«ï¿½æµ¿","ï¿½ï¿½æµ¿","ï¿½Ö±æµ¿");
 	
 	private static int myArr[] = {10,20,30,40,50};
 	
 	public static void main(String[] args) {
 		
-		// List·ÎºÎÅÍ Stream »ý¼º
+		// Listï¿½Îºï¿½ï¿½ï¿½ Stream ï¿½ï¿½ï¿½ï¿½
 		Stream<String> stream1 = names.stream();
 	
-		// ¹è¿­·ÎºÎÅÍ Stream »ý¼º
+		// ï¿½è¿­ï¿½Îºï¿½ï¿½ï¿½ Stream ï¿½ï¿½ï¿½ï¿½
 		IntStream stream2 = Arrays.stream(myArr);
 		System.out.println(stream2.sum());
 		
-		// Á¤¼öÇü ¼ýÀÚ ¿µ¿ªÀ» ÀÌ¿ëÇØ¼­ StreamÀ» »ý¼º
+		// ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ì¿ï¿½ï¿½Ø¼ï¿½ Streamï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		IntStream stream3 = IntStream.rangeClosed(1, 10);
 		
-		// file·Î ºÎÅÍ Stream »ý¼º
-		// °æ·Î path °´Ã¼ Àâ±â ( File°´Ã¼(java.io)¿Í À¯»çÇÑ java.nio¿¡ Æ÷ÇÔµÈ class path )
+		// fileï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ Stream ï¿½ï¿½ï¿½ï¿½
+		// ï¿½ï¿½ï¿½ path ï¿½ï¿½Ã¼ ï¿½ï¿½ï¿½ ( Fileï¿½ï¿½Ã¼(java.io)ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ java.nioï¿½ï¿½ ï¿½ï¿½ï¿½Ôµï¿½ class path )
 		Path path = Paths.get("asset/readme.txt");
 		try {
 			
-			// stream »ý¼º
+			// stream ï¿½ï¿½ï¿½ï¿½
 			Stream<String> stream4 = Files.lines(path,
 					Charset.forName("UTF-8"));
 			

@@ -1,6 +1,7 @@
 package javaNetwork;
 
 
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -23,7 +24,7 @@ import javafx.stage.Stage;
 
 public class Exam02_EchoClient extends Application{
 	TextArea textarea;
-	Button startbtn, stopbtn; // ¼­¹ö Á¢¼Ó, Á¾·á ¹öÆ°
+	Button startbtn, stopbtn; // ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Æ°
 	TextField tf;
 	Socket socket;
 	BufferedReader br;
@@ -39,37 +40,37 @@ public class Exam02_EchoClient extends Application{
 	}
 	@Override
 	public void start(Stage primaryStage) throws Exception {
-		//Stage arg0 -> window¸¦ ÁöÄªÇÔ
-		//È­¸é±¸¼ºÇØ¼­ window ¶ç¿ì´Â ÄÚµå
-		//È­¸é±âº» layoutÀ» ¼³Á¤ => È­¸éÀ» µ¿¼­³²ºÏÁß¾Ó(5°³ÀÇ ¿µ¿ª)À¸·Î ºÐ¸®
+		//Stage arg0 -> windowï¿½ï¿½ ï¿½ï¿½Äªï¿½ï¿½
+		//È­ï¿½é±¸ï¿½ï¿½ï¿½Ø¼ï¿½ window ï¿½ï¿½ï¿½ï¿½ ï¿½Úµï¿½
+		//È­ï¿½ï¿½âº» layoutï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ => È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ß¾ï¿½(5ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½)ï¿½ï¿½ï¿½ï¿½ ï¿½Ð¸ï¿½
 		BorderPane root = new BorderPane();
-		//BorderPaneÀÇ Å©±â¸¦ ¼³Á¤=> È­¸éÀ» ¶ç¿ì´Â windowÀÇ Å©±â¼³Á¤
+		//BorderPaneï¿½ï¿½ Å©ï¿½â¸¦ ï¿½ï¿½ï¿½ï¿½=> È­ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ windowï¿½ï¿½ Å©ï¿½â¼³ï¿½ï¿½
 		root.setPrefSize(700, 500);
-		//Component»ý¼ºÇØ¼­ BorderPane¿¡ ºÎÂø
+		//Componentï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ BorderPaneï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
 		textarea = new TextArea();
 		root.setCenter(textarea);
 		
-		startbtn = new Button("Server¿¡ Á¢¼Ó");
+		startbtn = new Button("Serverï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 		startbtn.setPrefSize(250, 50);
 		startbtn.setOnAction(t->{
-			 if (startbtn.getText().equals("Server¿¡ Á¢¼Ó")) {
+			 if (startbtn.getText().equals("Serverï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")) {
 				 try {
-						//¼­¹öÂÊ¿¡ SocketÁ¢¼ÓÀ» ½Ãµµ
+						//ï¿½ï¿½ï¿½ï¿½ï¿½Ê¿ï¿½ Socketï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½Ãµï¿½
 						socket = new Socket("127.0.0.1",5554);
-						System.out.println("**¼­¹ö ¿¬°á OK**");
-						//Á¢¼Ó¿¡ ¼º°øÇÏ¸é socket°´Ã¼¸¦ ÇÏ³ª È¹µæ
+						System.out.println("**ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ OK**");
+						//ï¿½ï¿½ï¿½Ó¿ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Ï¸ï¿½ socketï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ï³ï¿½ È¹ï¿½ï¿½
 						InputStreamReader isr = new InputStreamReader(socket.getInputStream());
 						br = new BufferedReader(isr);
 						out = new PrintWriter(socket.getOutputStream());
-						printMsg("Á¢¼Ó ¼º°ø");
-						startbtn.setText("Á¢¼Ó Á¾·á");
+						printMsg("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
+						startbtn.setText("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½");
 						
 					}catch(Exception e) {
 						System.out.println(e);
 					}
-	            } else if (startbtn.getText().equals("Á¢¼Ó Á¾·á")) {
+	            } else if (startbtn.getText().equals("ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½")) {
 	                try {
-	                    printMsg("¼­¹ö¿¡ Á¢¼ÓÇØÁ¦ÇÏ¿´½À´Ï´Ù");
+	                    printMsg("ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¿ï¿½ï¿½ï¿½ï¿½Ï´ï¿½");
 	                    startbtn.setText("JOIN");
 	                    socket.close();
 	                } catch (Exception e) {
@@ -99,7 +100,7 @@ public class Exam02_EchoClient extends Application{
 	    });
 		
 //		tf.setOnAction(t -> {
-//			// ÀÔ·Â»óÀÚ(Textfield)¿¡¼­ enter key°¡ ÀÔ·ÂµÇ¸é È£Ãâ
+//			// ï¿½Ô·Â»ï¿½ï¿½ï¿½(Textfield)ï¿½ï¿½ï¿½ï¿½ enter keyï¿½ï¿½ ï¿½Ô·ÂµÇ¸ï¿½ È£ï¿½ï¿½
 //			String msg = tf.getText();
 //			out.println(msg);
 //			out.flush();
@@ -114,16 +115,16 @@ public class Exam02_EchoClient extends Application{
 
 		FlowPane flowpane = new FlowPane();
 		flowpane.setPrefSize(700, 50);
-		//flowpane¿¡ ¹öÆ° Ãß°¡
+		//flowpaneï¿½ï¿½ ï¿½ï¿½Æ° ï¿½ß°ï¿½
 		flowpane.getChildren().add(startbtn);
 	
 		flowpane.getChildren().add(tf);
 		root.setBottom(flowpane);
 		
-		//Scene°´Ã¼°¡ ÇÊ¿ä
+		//Sceneï¿½ï¿½Ã¼ï¿½ï¿½ ï¿½Ê¿ï¿½
 		Scene scene = new Scene(root); 
 		primaryStage.setScene(scene);
-		primaryStage.setTitle("Network ¿¹Á¦ ÀÔ´Ï´Ù.");
+		primaryStage.setTitle("Network ï¿½ï¿½ï¿½ï¿½ ï¿½Ô´Ï´ï¿½.");
 		primaryStage.show();
 	}
 
